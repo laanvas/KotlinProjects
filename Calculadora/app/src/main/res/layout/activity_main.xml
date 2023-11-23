@@ -7,62 +7,79 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/result_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="100dp"
+        android:background="@color/black"
+        android:textColor="@color/white"
+        android:text="Resultado "
+        android:textSize="24sp" />
+
     <EditText
         android:id="@+id/et_a"
         android:layout_margin="20dp"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Digite um numero:"/>
 
     <EditText
         android:id="@+id/et_b"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:hint="Digite um segundo numero:"
-        />
-    
+        android:hint="Digite um segundo numero:" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <Button
             android:id="@+id/btn_add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
-            android:text="+"
-            />
+            android:text="+" />
+
         <Button
             android:id="@+id/btn_substraction"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
-            android:text="-"
-            />
+            android:text="-" />
+
         <Button
             android:id="@+id/btn_multiplication"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
-            android:text="*"
-            />
+            android:text="*" />
+
         <Button
             android:id="@+id/btn_division"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
-            android:text="/"
-            />
+            android:text="/" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_squared"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="^2" />
+
+
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/result_tv"
-        android:layout_width="135dp"
-        android:layout_height="57dp"
-        android:layout_margin="100dp"
-        android:gravity="center"
-        android:text="Resultado "
-        android:textSize="24sp" />
+
 
 </LinearLayout>

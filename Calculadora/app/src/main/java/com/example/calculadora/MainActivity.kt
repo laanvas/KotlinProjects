@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener
     lateinit var btnSub : Button
     lateinit var btnMultiply : Button
     lateinit var btnDivision : Button
+    lateinit var btnSquared : Button
     lateinit var etA : EditText
     lateinit var etB : EditText
     lateinit var resultTv : TextView
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener
         btnSub = findViewById(R.id.btn_substraction)
         btnMultiply = findViewById(R.id.btn_multiplication)
         btnDivision = findViewById(R.id.btn_division)
+        btnSquared = findViewById(R.id.btn_squared)
         etA = findViewById(R.id.et_a)
         etB = findViewById(R.id.et_b)
         resultTv = findViewById(R.id.result_tv)
@@ -35,6 +37,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener
         btnSub.setOnClickListener(this)
         btnMultiply.setOnClickListener(this)
         btnDivision.setOnClickListener(this)
+        btnSquared.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -42,6 +45,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener
         var a = etA.text.toString().toDouble()
         var b = etB.text.toString().toDouble()
         var result = 0.0
+
+
 
 
 
@@ -60,6 +65,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener
 
             R.id.btn_division -> {
                 result = a / b
+            }
+
+            R.id.btn_squared -> {
+                result = a * a
             }
 
         }
