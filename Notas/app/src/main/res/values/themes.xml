@@ -6,4 +6,15 @@
     </style>
 
     <style name="Theme.Notas" parent="Base.Theme.Notas" />
+
+    <style name="ThemeOverlay.Search" parent="Base.Theme.Notas">
+        <item name="editTextColor">@color/ColorWhite</item>
+        <item name="android:textColorHint">@color/ColorGray</item>
+    </style>
+
+    <style name="ThemeOverlay.Notas.FullscreenContainer" parent="">
+        <item name="fullscreenBackgroundColor">@color/light_blue_600</item>
+        <item name="fullscreenTextColor">@color/light_blue_A200</item>
+    </style>
+
 </resources>
