@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="red">#FF0000</color>
+    <color name="green">#00FF00</color>
+    <color name="blue">#0000FF</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="purple">#800080</color>
+    <color name="cyan">#00FFFF</color>
+    <color name="magenta">#FF00FF</color>
+    <color name="aqua">#00FFFF</color>
+    <color name="pink">#FFC0CB</color>
+    <color name="lime">#00FF00</color>
+    <color name="teal">#008080</color>
+    <color name="lavender">#E6E6FA</color>
+    <color name="indigo">#4B0082</color>
+    <color name="maroon">#800000</color>
+    <color name="olive">#808000</color>
+    <color name="navy">#000080</color>
+    <color name="silver">#C0C0C0</color>
+    <color name="gold">#FFD700</color>
+    <color name="brown">#A52A2A</color>
+    <color name="forest_green">#228B22</color>
+    <color name="dark_orange">#FF8C00</color>
+    <color name="slate_blue">#6A5ACD</color>
+    <color name="medium_spring_green">#00FA9A</color>
+    <color name="cornflower_blue">#6495ED</color>
+    <color name="orchid">#DA70D6</color>
+    <color name="light_salmon">#FFA07A</color>
+    <color name="dark_turquoise">#00CED1</color>
+    <color name="steel_blue">#4682B4</color>
+    <color name="medium_orchid">#BA55D3</color>
+    <color name="dark_olive_green">#556B2F</color>
+    <color name="background">#373B57</color>
+    <color name="sub_background">#595F8A</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+</resources>
