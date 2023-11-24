@@ -50,4 +50,16 @@ class Connection(context: Context):SQLiteOpenHelper(context, "Userdate", null, 1
 
     }
 
+    fun checkentry(email: String, senha: String): Boolean {
+        val c = this.writableDatabase
+        val query = "SELECT * FROM Userdata Where email= '$email' and senha= '$senha'"
+        val cursor = c.rawQuery(query, null)
+        if (cursor.count<=0){
+            cursor.close()
+            return false
+        }
+        cursor.close()
+        return true
+    }
+
 }
