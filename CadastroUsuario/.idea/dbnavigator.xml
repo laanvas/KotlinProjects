@@ -23,7 +23,6 @@ DROP COLUMN id;]]></console>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files>
-      <object connection-id="78f0c646-6804-4c4a-b6cf-bef2d3e6e6e3" object-ref="consoles/Userdata" />
       <object connection-id="26bc866d-b9f7-4747-9196-80f062006f9f" object-ref="consoles/User" />
       <object connection-id="26bc866d-b9f7-4747-9196-80f062006f9f" object-ref="schemas/cadastrousuarios/tables/user" />
     </open-files>
