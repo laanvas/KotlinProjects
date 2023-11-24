@@ -12,45 +12,32 @@ import android.net.NetworkCapabilities
 import android.os.Build
 
 
-private lateinit var Cadastro: Button
-private lateinit var btnLogin: Button
 
+lateinit var retryConnection : Button
 
-class MainActivity : AppCompatActivity() {
+class alertWIFI : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_alert_wifi)
 
-        Cadastro = findViewById(R.id.Cadastro)
-        btnLogin = findViewById(R.id.btnLogin)
+   retryConnection = findViewById(R.id.retryConnection)
 
-        Cadastro.setOnClickListener{
-            val intent = Intent(this, cadastro_user::class.java)
-            startActivity(intent)
-        }
-        btnLogin.setOnClickListener{
-            val Intent = Intent(this, login_user::class.java)
-            startActivity(Intent)
-        }
-
-        val checkButton: Button = findViewById(R.id.buttonCheck)
-
-
-
-
-        checkButton.setOnClickListener {
+        retryConnection.setOnClickListener {
             if (checkForInternet(this)) {
-                Toast.makeText(this, "Connected", Toast.LENGTH_SHORT).show()
+                val Intent = Intent(this, MainActivity::class.java)
+                startActivity(Intent)
             } else {
                 val Intent = Intent(this, alertWIFI::class.java)
                 startActivity(Intent)
             }
         }
+
     }
 
     public fun checkForInternet(context: Context): Boolean {
 
-        val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val connectivityManager =
+            context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
 
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -78,12 +65,4 @@ class MainActivity : AppCompatActivity() {
 
 
     }
-
-
-            }
-
-
-
-
-
-
+}

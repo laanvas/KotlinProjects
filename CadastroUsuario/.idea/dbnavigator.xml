@@ -24,7 +24,6 @@ DROP COLUMN id;]]></console>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files>
       <object connection-id="26bc866d-b9f7-4747-9196-80f062006f9f" object-ref="consoles/User" />
-      <object connection-id="26bc866d-b9f7-4747-9196-80f062006f9f" object-ref="schemas/cadastrousuarios/tables/user" />
     </open-files>
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
