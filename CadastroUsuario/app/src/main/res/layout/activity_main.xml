@@ -22,7 +22,7 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="35dp"
         android:background="@color/sub_background"
         android:orientation="vertical">
 
@@ -41,6 +41,14 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:hint="Digite o seu cpf:" />
+
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:hint="Digite o seu email:" />
 
     <EditText
         android:id="@+id/senha"
