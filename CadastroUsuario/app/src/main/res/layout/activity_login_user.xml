@@ -29,14 +29,14 @@
 
 
         <EditText
-            android:id="@+id/email"
+            android:id="@+id/login_email"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:hint="Digite o seu email:" />
 
         <EditText
-            android:id="@+id/senha"
+            android:id="@+id/login_senha"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"

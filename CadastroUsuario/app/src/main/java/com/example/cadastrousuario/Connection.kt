@@ -54,12 +54,12 @@ class Connection(context: Context):SQLiteOpenHelper(context, "Userdate", null, 1
         val c = this.writableDatabase
         val query = "SELECT * FROM Userdata Where email= '$email' and senha= '$senha'"
         val cursor = c.rawQuery(query, null)
-        if (cursor.count<=0){
+        if (cursor.count <= 0) {
             cursor.close()
             return false
+        } else {
+            cursor.close()
+            return true
         }
-        cursor.close()
-        return true
     }
-
 }

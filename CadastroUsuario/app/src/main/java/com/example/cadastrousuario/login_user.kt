@@ -13,28 +13,28 @@ class login_user : AppCompatActivity() {
     private lateinit var login: Button
     private lateinit var email: EditText
     private lateinit var senha: EditText
-    private lateinit var c: Connection
+    private lateinit var con: Connection
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_user)
 
         login = findViewById(R.id.login)
-        email = findViewById(R.id.email)
-        senha = findViewById(R.id.senha)
-        c = Connection(this)
+        email = findViewById(R.id.login_email)
+        senha = findViewById(R.id.login_senha)
+        con = Connection(this)
 
         login.setOnClickListener{
-            val emailtext = email.text.toString()
-            val senhatext = senha.text.toString()
+            val login_email = email.text.toString()
+            val login_senha = senha.text.toString()
 
-        if(TextUtils.isEmpty(emailtext) || TextUtils.isEmpty(senhatext)){
+        if(TextUtils.isEmpty(login_email) || TextUtils.isEmpty(login_senha)){
             Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_SHORT).show()
         }else{
-            val checkemail = c.checkentry(emailtext, senhatext)
-            if(checkemail == true){
-                val intent = Intent(this, systemacess::class.java)
-                startActivity(intent)
+            val checkacess = con.checkentry(login_email, login_senha)
+            if(checkacess == true){
+                val Intent = Intent(this, sucessacess::class.java)
+                startActivity(Intent)
             }else{
                 Toast.makeText(this, "Email ou senha incorretos!", Toast.LENGTH_SHORT).show()
             }

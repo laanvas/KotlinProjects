@@ -15,6 +15,9 @@
         android:theme="@style/Theme.CadastroUsuario"
         tools:targetApi="31">
         <activity
+            android:name=".sucessacess"
+            android:exported="false" />
+        <activity
             android:name=".alertWIFI"
             android:exported="false" />
         <activity
