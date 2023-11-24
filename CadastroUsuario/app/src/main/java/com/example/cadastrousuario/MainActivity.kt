@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 
- private lateinit var btnCadastro: Button
+ private lateinit var Cadastro: Button
  private lateinit var btnLogin: Button
 
 
@@ -14,17 +14,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btnCadastro = findViewById(R.id.btnCadastro)
+        Cadastro = findViewById(R.id.Cadastro)
         btnLogin = findViewById(R.id.btnLogin)
 
-        btnCadastro.setOnClickListener{
-            val Intent = Intent(this, cadastro_user::class.java)
+        Cadastro.setOnClickListener{
+            val intent = Intent(this, cadastro_user::class.java)
+            startActivity(intent)
+        }
+        btnLogin.setOnClickListener{
+            val Intent = Intent(this, login_user::class.java)
             startActivity(Intent)
         }
-        //btnLogin.setOnClickListener{
-        //    val intent = Intent(this, cada::class.java)
-         //   startActivity(Intent)
-        //}
 
         }
 

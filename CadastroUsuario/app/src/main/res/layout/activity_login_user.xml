@@ -6,14 +6,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/background"
-    tools:context=".cadastro_user">
+    tools:context=".login_user">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="110dp"
         android:layout_marginTop="100dp"
-        android:text="Realizar Cadastro"
+        android:text="Realizar Login"
         android:textColor="@color/white"
         android:layout_marginBottom="10dp"
         android:textSize="24sp" />
@@ -26,31 +26,17 @@
         android:orientation="vertical">
 
 
-        <EditText
-            android:id="@+id/cadastro_nome"
-            android:layout_margin="20dp"
-            android:layout_width="300dp"
-
-            android:layout_height="wrap_content"
-            android:hint="Digite o seu nome completo:"/>
-
-        <EditText
-            android:id="@+id/cadastro_cpf"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:hint="Digite o seu cpf:" />
 
 
         <EditText
-            android:id="@+id/cadastro_email"
+            android:id="@+id/email"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:hint="Digite o seu email:" />
 
         <EditText
-            android:id="@+id/cadastro_senha"
+            android:id="@+id/senha"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
@@ -58,34 +44,25 @@
             android:inputType="textPassword"
             />
 
-        <EditText
-            android:id="@+id/confirm_senha"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:hint="Confirme a sua senha:"
-            android:inputType="textPassword"
-            />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"
         android:orientation="horizontal">
 
 
         <Button
-            android:id="@+id/enviar"
+            android:id="@+id/login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
-            android:text="Enviar" />
+            android:text="Entrar" />
 
         <Button
-            android:id="@+id/limpar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
@@ -93,8 +70,6 @@
 
 
     </LinearLayout>
-
-
 
 
 </LinearLayout>

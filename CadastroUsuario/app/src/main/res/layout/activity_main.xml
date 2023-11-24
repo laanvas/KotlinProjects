@@ -28,14 +28,14 @@
         android:layout_marginTop="150dp"
         >
         <Button
-            android:id="@+id/btnCadastro"
+            android:id="@+id/Cadastro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Cadastrar"
             />
         <Button
-            android:id="@+id/btnLogin"
             android:text="Login"
+            android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
