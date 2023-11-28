@@ -71,6 +71,30 @@ fun DrawScope.bottomLeft() {
     }
 }
 
+fun DrawScope.topLeft(){
+    circle {
+        Offset(it * 2f, it * 2)
+    }
+}
+
+fun DrawScope.bottomRight() {
+    circle {
+        Offset(size.width - it, size.height - (it*2f))
+    }
+}
+
+fun DrawScope.middleRight(){
+    circle {
+        Offset(size.width - it, size.height / 2)
+    }
+}
+
+fun DrawScope.middleLeft(){
+    circle {
+        Offset(it*2f, size.height / 2)
+    }
+}
+
 fun DrawScope.bullet(number: Int){
     when(number) {
         1 -> {
@@ -84,6 +108,28 @@ fun DrawScope.bullet(number: Int){
             topRight()
             center()
             bottomLeft()
+
+        }
+        4 -> {
+            topRight()
+            bottomLeft()
+            topLeft()
+            bottomRight()
+        }
+        5 -> {
+            topRight()
+            bottomLeft()
+            topLeft()
+            bottomRight()
+            center()
+        }
+        6 -> {
+        topRight()
+        bottomLeft()
+        topLeft()
+        bottomRight()
+        middleRight()
+            middleLeft()
         }
 
     }
@@ -112,7 +158,7 @@ fun App(){
         .fillMaxSize()
         .background(Color.Black)){
 
-        Dice(3, Modifier.align(Alignment.Center))
+        Dice(6, Modifier.align(Alignment.Center))
 
             Button(onClick = { /*TODO*/ }, modifier = Modifier
                 .align(Alignment.Center)
