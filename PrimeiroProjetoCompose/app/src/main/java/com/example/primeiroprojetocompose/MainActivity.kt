@@ -14,6 +14,11 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.CornerRadius
@@ -25,6 +30,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.example.primeiroprojetocompose.ui.theme.PrimeiroProjetoComposeTheme
+import kotlinx.coroutines.delay
+import kotlin.random.Random
+import kotlin.random.nextInt
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -154,17 +162,37 @@ fun Dice(number: Int ,modifier: Modifier) {
 
 @Composable
 fun App(){
+
+    var r by remember {
+        mutableStateOf(1)
+    }
+    var timer by remember {
+        mutableStateOf(0)
+    }
+
+    LaunchedEffect(key1 = timer){
+        if (timer > 0){
+            delay(500 * (1.0f / timer).toLong())
+            r = Random.nextInt(1..6)
+            timer -= 1
+        }
+    }
+
     Box(modifier = Modifier
         .fillMaxSize()
         .background(Color.Black)){
 
-        Dice(6, Modifier.align(Alignment.Center))
-
-            Button(onClick = { /*TODO*/ }, modifier = Modifier
+        Dice(r, Modifier.align(Alignment.Center))
+            Button(onClick = {
+                             timer = 60
+            }, modifier = Modifier
                 .align(Alignment.Center)
                 .offset(y = (100).dp)) {
+                if(timer > 0){
+                    Text(text = "$timer")
+                }else{
                 Text("Jogar")
-            }
+            }}
     }
 }
 
